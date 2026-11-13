@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "NAME: TrailLite Backpack\nPRICE: not stated\n- 20L capacity\n- Waterproof shell\n- Padded shoulder straps",
+            "thoughtSignature": "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"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 148,
+    "candidatesTokenCount": 31,
+    "totalTokenCount": 782,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 148
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31
+      }
+    ],
+    "thoughtsTokenCount": 603,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-4-hydrogen",
+  "responseId": "qUH2atDoJKjU-sAPwbPQ2Ag"
+}

@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```python\ndef moving_average(xs, k):\n    if k \u003c= 0:\n        raise ValueError(\"k must be positive\")\n    if not xs or k \u003e len(xs):\n        return []\n    out = []\n    for i in range(len(xs) - k + 1):\n        window = xs[i:i + k]\n        out.append(sum(window) / k)\n    return out\n```",
+            "thoughtSignature": "EpgICpUIAWkUfRPem09OJVaFAYTa0bh0t+CGeHEnpqWL/CZSNQQ1HiEP6+0m7Q8JENOm8Z2CD7acUj0qiAGofSN1zRhKjLvhMREs+rFyz9yb4VHiDlWqFd9nWZ16bbkR3EPuIuQvXBJRBNysVjefPY+nvMZ3lIC+m78QuJejW1a9jMwJ4+8tYAFOoCmq3cQOmcZ1yamJfvt2l0bE4WmZFLX9I+mBlWJXrZ7x5GssCqndz42jnG4lJ1Xvq8vjLshc5++ItxoblGm+Y5w1zzlv6OUry3kP7kWWCHqQ6N+QQYT64R/V4DvgcyHN6OGIlq1A9RxmrjECrClfbzUsFdg1IZ/EPtayNvrsAE0fZWDda2f/WKJUrKTa7CHgIA+ln+n7yIzpebJyRn/CjBhXGJ1lt64HRhH6+9qa/mEPR628AZk/OV7Oa4wp3gBp3Gbb1T88HG0XPrOSyk2Q5bUw9Czsgaaub79rIF72eT2x7wjj3Tcn2KZu2K1LGcWYiB5eGl0oWE8K52TpIeZZgMDV7ztcXGM+u2yFGOkmsge3WmE7zeOMrPpYMortoMfHw2BTRr1h9mJWSbMkA6egUFn3nC9Cf6CJjXLd5NW6X5Ech67kJjLa5g95vT1QU/5GHqlrFvg2INg6kHjf1RpJgJ/GHXiAgO8i8usYqxbhPUBENhqZJFcZMyRRgkJaP9Ji5WkOqKmvKi8nLTsKZco5u1eVCZgLD+PE8wAsbJSA3BmROtwq0xlnDUKiSHwZFLIeloPmnIV8AQ01xRquErHv0K4uXAbIgkI+j6rBzpq012ehRbc1UZGQ3mUY9OC6Oi262LnkD4Mgv2Y5paeQq3CaZ9sTOL+TVMvRMLbsiyQUna7zj2cSNx+vjPj2NzXaciHNx6RZoQuG8kvPUhZO8O8jx47ICZVCUKlshMsFg9n82Dxkef1mX5BAL13O1MnIkIIC3BBF4kyUsdNtWfPKR3AoINNIqgIRUhoTO3C2iC2GEoMH58ahUDyl0vgUzdU5EpzDGnZ2k/cprGyFNmAcAxDSgrt4Sh8GIxotFO362MWOzoqFvI2wBWMl0jCWX2BEHQwuIIimYAnNYSfA8lyeq5191GysVfU9CzSo/WlNLuwSxIXdYVIArvmDt0lUDWbVwbkWErWrZj91BQrXBZknyjBG71E3vxLRbH86qp/MDVNAGkP/R69Ha01rQAzb0n0sRpICjcpbWB9mO96mgdKDvK3xzQnuBvZ4NXTfOPTr3DRSxnKo/EQpPg+Axf4U0c+QNnvz80OQdgUqBo05X6aKD82FqLsK/HVbZcHZjBainaqRQm+Z3WhRHWBRrrLU4Rvze5pmTOVczx6PPa4yr8mmv0ta5Zqu2RP2XiUpA+3yN4QspBc8ox0vcVw/wABN6gBE0p0Fog=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 214,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 714,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 214
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104
+      }
+    ],
+    "thoughtsTokenCount": 396,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-4-hydrogen",
+  "responseId": "mEH2aqCEO9rpz7IP0-yosQc"
+}

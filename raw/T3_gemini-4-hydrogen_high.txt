@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"project\": \"Project Aurora\", \"budget_jpy\": 12500000, \"deadline\": \"2027-03-15\", \"owner\": \"Yuki Tanaka\", \"cancelled_items\": [\"Vendor X pilot rollout\"]}",
+            "thoughtSignature": "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"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 181,
+    "candidatesTokenCount": 61,
+    "totalTokenCount": 711,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 181
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61
+      }
+    ],
+    "thoughtsTokenCount": 469,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-4-hydrogen",
+  "responseId": "pkH2aqjTL5nCxdIP4dWq8QM"
+}
