@@ -1,0 +1,333 @@
+{
+  "probe": [
+    {
+      "model_requested": "gemini-4-hydrogen",
+      "model_tried": "gemini-4-hydrogen",
+      "http_status": 200,
+      "error": null,
+      "attempts": 1,
+      "wall_seconds": 3.098,
+      "stall_retry": false,
+      "stall_notes": [],
+      "response_text": "OK",
+      "usage": {
+        "promptTokenCount": 36,
+        "candidatesTokenCount": 5,
+        "thoughtsTokenCount": 55,
+        "totalTokenCount": 96
+      },
+      "raw_file": "probe_gemini-4-hydrogen.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 108.647,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 2: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 3: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 78.952,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: HTTP 503 (5xx), retried",
+        "attempt 2: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 31.205,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: HTTP 503 (5xx), retried",
+        "attempt 2: HTTP 503 (5xx), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 79.419,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 2: HTTP 503 (5xx), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash-preview",
+      "http_status": 404,
+      "error": "HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-3.8-flash-preview is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+      "attempts": 1,
+      "wall_seconds": 0.535,
+      "stall_retry": false,
+      "stall_notes": [],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash-preview.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 81.296,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 2: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 429,
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 9h16m4.853032451s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.8-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"33364s\"\n      }\n    ]\n  }\n}\n",
+      "attempts": 1,
+      "wall_seconds": 0.563,
+      "stall_retry": false,
+      "stall_notes": [],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 429,
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 9h14m51.341613414s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.8-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"33291s\"\n      }\n    ]\n  }\n}\n",
+      "attempts": 3,
+      "wall_seconds": 13.484,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: HTTP 503 (5xx), retried",
+        "attempt 2: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    }
+  ],
+  "runs": [
+    {
+      "task": "T1",
+      "model_requested": "gemini-4-hydrogen",
+      "model": "gemini-4-hydrogen",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 2.914,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 214,
+        "candidatesTokenCount": 104,
+        "thoughtsTokenCount": 396,
+        "totalTokenCount": 714
+      },
+      "score_passed": 5,
+      "score_total": 5,
+      "score": 1.0,
+      "harness_details": {
+        "normal_window": true,
+        "k_equals_1": true,
+        "empty_input": true,
+        "k_greater_than_len": true,
+        "value_error_k0": true
+      },
+      "response_text": "```python\ndef moving_average(xs, k):\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    if not xs or k > len(xs):\n        return []\n    out = []\n    for i in range(len(xs) - k + 1):\n        window = xs[i:i + k]\n        out.append(sum(window) / k)\n    return out\n```",
+      "raw_file": "T1_gemini-4-hydrogen_high.txt"
+    },
+    {
+      "task": "T2",
+      "model_requested": "gemini-4-hydrogen",
+      "model": "gemini-4-hydrogen",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 10.668,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 170,
+        "candidatesTokenCount": 272,
+        "thoughtsTokenCount": 1597,
+        "totalTokenCount": 2039
+      },
+      "score_passed": 8,
+      "score_total": 8,
+      "score": 1.0,
+      "harness_details": {
+        "1h30m": true,
+        "45s": true,
+        "2d_3h": true,
+        "90m": true,
+        "1h_only": true,
+        "30m30s": true,
+        "empty_raises": true,
+        "unknown_unit_raises": true
+      },
+      "response_text": "```python\nimport re\n\n\ndef parse_duration(s: str) -> int:\n    if not isinstance(s, str):\n        raise ValueError(\"Duration must be a string\")\n    s = s.strip()\n    if not s:\n        raise ValueError(\"Empty duration string\")\n\n    units = {\"d\": 86400, \"h\": 3600, \"m\": 60, \"s\": 1}\n    pattern = re.compile(r\"(\\d+)([^\\d\\s]+)\\s*\")\n\n    total = 0\n    pos = 0\n    for match in pattern.finditer(s):\n        if match.start() != pos:\n            raise ValueError(f\"Invalid duration format: {s!r}\")\n        value = int(match.group(1))\n        unit = match.group(2)\n        if unit not in units:\n            raise ValueError(f\"Unknown unit: {unit!r}\")\n        total += value * units[unit]\n        pos = match.end()\n\n    if pos != len(s):\n        raise ValueError(f\"Invalid duration format: {s!r}\")\n\n    return total\n```",
+      "raw_file": "T2_gemini-4-hydrogen_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-4-hydrogen",
+      "model": "gemini-4-hydrogen",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 3.014,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 181,
+        "candidatesTokenCount": 61,
+        "thoughtsTokenCount": 469,
+        "totalTokenCount": 711
+      },
+      "score_passed": 5,
+      "score_total": 5,
+      "score": 1.0,
+      "harness_details": {
+        "project": true,
+        "budget_jpy": true,
+        "deadline": true,
+        "owner": true,
+        "cancelled_items": true
+      },
+      "response_text": "{\"project\": \"Project Aurora\", \"budget_jpy\": 12500000, \"deadline\": \"2027-03-15\", \"owner\": \"Yuki Tanaka\", \"cancelled_items\": [\"Vendor X pilot rollout\"]}",
+      "raw_file": "T3_gemini-4-hydrogen_high.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-4-hydrogen",
+      "model": "gemini-4-hydrogen",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 3.025,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 148,
+        "candidatesTokenCount": 31,
+        "thoughtsTokenCount": 603,
+        "totalTokenCount": 782
+      },
+      "score_passed": 4,
+      "score_total": 4,
+      "score": 1.0,
+      "harness_details": {
+        "line1_name": true,
+        "line2_not_stated_no_number": true,
+        "exactly_3_bullets": true,
+        "bullets_only_text_features": true
+      },
+      "response_text": "NAME: TrailLite Backpack\nPRICE: not stated\n- 20L capacity\n- Waterproof shell\n- Padded shoulder straps",
+      "raw_file": "T4_gemini-4-hydrogen_high.txt"
+    },
+    {
+      "task": "T2",
+      "model_requested": "gemini-4-hydrogen",
+      "model": "gemini-4-hydrogen",
+      "thinking_requested": "xhigh",
+      "thinking_level": "xhigh",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 28.838,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 170,
+        "candidatesTokenCount": 3,
+        "thoughtsTokenCount": 8189,
+        "totalTokenCount": 8362
+      },
+      "score_passed": 0,
+      "score_total": 8,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T2_gemini-4-hydrogen_xhigh.txt"
+    }
+  ],
+  "notes": [
+    "STOPPED: probe failed for ['gemini-3.8-flash']; main runs not executed. See probe records for verbatim errors and variants tried.",
+    "Resumed: reused earlier probe/run records from results.json.",
+    "gemini-3.8-flash: probe cycle 1 failed with HTTP 503; retrying probe after 60s (transient 5xx).",
+    "gemini-3.8-flash: probe cycle 2 failed with HTTP 503; retrying probe after 60s (transient 5xx).",
+    "STOPPED: probe failed for ['gemini-3.8-flash']; main runs not executed. See probe records for verbatim errors and variants tried.",
+    "gemini-3.8-flash: base ID returned HTTP 503 (UNAVAILABLE, high demand) across 4 probe cycles / 16 attempts; tried variant gemini-3.8-flash-preview once as the step-A variant fallback.",
+    "Resumed: reused earlier probe/run records from results.json.",
+    "gemini-3.8-flash: probe cycle 1 failed with HTTP 503; retrying probe after 60s (transient 5xx).",
+    "gemini-3.8-flash: probe cycle 2 failed with HTTP 429; retrying probe after 60s (transient 5xx).",
+    "STOPPED: probe failed for ['gemini-3.8-flash']; main runs not executed. See probe records for verbatim errors and variants tried.",
+    "PARTIAL RUN: gemini-3.8-flash free-tier daily quota exhausted (HTTP 429, limit 20/day, retry in ~9h15m as of the last probe); running Hydrogen main runs only via run_hydrogen_only.py. Flash runs remain pending and compare.py will fill them in on a later invocation.",
+    "T2 xhigh (gemini-4-hydrogen): HTTP 200 but response text was empty; finishReason=MAX_TOKENS, thoughtsTokenCount=8189 vs candidatesTokenCount=3 with maxOutputTokens=8192, i.e. thinking consumed essentially the whole output budget and no code was emitted. Scored 0/8 as no_response."
+  ]
+}
