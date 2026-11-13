@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "OK",
+            "thoughtSignature": "EroCCrcCAWkUfRNBltQ8OlnxmtZbHW+u8MtYKAKs7HAL9zR901GJ2vObSwTFFWUOLNhHKKgYrFSmf6DHQjdip12yjXMc2l0dAamFijhTvzS2bgWHhYVLMCqQ0UlNgvyd43k4lY/NwlR33WVbYfPfOJz/NTVjdHntPK/VQsslV1JOHorgxzu2diZo/vIUGjjAQaPrDAo8FntcMk7dJDzpVd0OTMzBrF4c8VXzMWUuJnlGa9JRl3vZYDY/dI9ijsBPvzdg5YGkC/+CgaNR49Wd03IOCpiXT6Rql7xvzWaXGnUACUXcjZQjbRyXkpg3V94Cmr3k1uNZYki+zsE7hJ5pCFPxKfKc6PyQmZrISCnFS/wLKSq06/WnQraxcTsaLQen30qxbCGU7+McJ4Uqgoieij1ya03FZa4dG7yLu0M="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 36,
+    "candidatesTokenCount": 5,
+    "totalTokenCount": 96,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5
+      }
+    ],
+    "thoughtsTokenCount": 55,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-4-hydrogen",
+  "responseId": "DD32aoWGIvH8wbUPofyiyQU"
+}
