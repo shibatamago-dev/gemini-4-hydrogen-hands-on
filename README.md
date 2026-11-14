@@ -2,9 +2,9 @@
 
 Gemini 4 Hydrogen（`gemini-4-hydrogen`）と Gemini 3.8 Flash（`gemini-3.8-flash`）に同じ課題を投げて、返ってきたコードや文章を機械的に採点したときの、課題・コード・結果です。
 
-Zenn記事（下書き）の検証部分で使ったものと、課題の全文はここで見られます。
+Zenn記事の検証部分で使ったものと、課題の全文はここで見られます。
 
-- 記事: [Gemini 4 Hydrogenを実際に動かしてみた](https://github.com/shibatamago-dev/zenn-content/blob/main/articles/gemini-4-hydrogen-hands-on.md)（zenn-content リポジトリ内）
+- 記事: [Gemini 4 Hydrogenを実際に動かしてみた。3.8 Flashの後継を無料枠で試す](https://zenn.dev/shibatamago_dev/articles/gemini-4-hydrogen-hands-on)
 
 ## 課題（全部で4つ＋追加1つ）
 
@@ -20,11 +20,17 @@ Zenn記事（下書き）の検証部分で使ったものと、課題の全文�
 
 課題の全文（プロンプト）と採点コードは `standalone_compare.py` の中にあります。
 
-## 結果（2026-11-13、results.json）
+## 結果（2026-11-13〜15、results.json）
 
 Hydrogen（high）は T1 5/5、T2 8/8、T3 5/5、T4 4/4 でした。T2 を xhigh で解かせた回は、思考トークンが 8,189 / 8,192 を使い切り、答えの本文が空になりました（終了理由 MAX_TOKENS）。思考トークンは出力上限の中から消費されるので、xhigh を使うときは出力上限を大きめに取る必要があります。
 
-Flash 側はこの実行では測れていません。503（需要過多）が続いたあと 429 になり、無料枠の上限（gemini-3.8-flash は 1 日 20 回まで）に当たりました。枠の回復後に再実行して、結果を更新します。
+Flash 側は、無料枠 API が 503（需要過多）とタイムアウトを繰り返し、2 日越しになりました。最終結果は T1 5/5、T2 8/8、T3 5/5、T4 4/4 で、Hydrogen と同じく全課題満点でした。取得経路は課題ごとに違います。
+
+- T1: API（自分の PC から、別プロジェクトのキー）
+- T2: API
+- T3・T4: AI Studio Playground（API で最後まで取得できなかったため）。思考レベル High と出力上限 8,192 は合わせましたが、temperature は AI Studio ではこのモデルに設定項目がなく既定値のままです。厳密な同条件ではないため、結果ファイルにも経路を明記しています
+
+API 経由の試行は、記録分で 14 回中成功 2 回（503 が 7 回、タイムアウトが 4 回、429 が 1 回）でした。失敗したリクエストも無料枠の回数に数えられます（1 日 20 回まで、リセットは太平洋時間の深夜 0 時）。`results.json` に全試行の記録が入っています。T3・T4 の Playground の答えと採点は `playground_T3_2026-11-15.json`、`playground_T4_2026-11-15.json` に分けて置いています。
 
 `results.json` の所要時間は Muse の実行環境から測ったもので、接続が止まることがある環境の数字です。モデルの応答速度として読まないでください。
 

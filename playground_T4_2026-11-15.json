@@ -1,0 +1,16 @@
+{
+  "task": "T4",
+  "model": "gemini-3.8-flash",
+  "route": "AI Studio Playground (manual, by Takai)",
+  "conditions_note": "thinkingLevel High and Output length 8192 set in UI (visible in screenshots); temperature NOT settable for this model in AI Studio (default 1.0); single run by Takai 2026-11-15 ~02:07 JST; finished immediately per Takai; answer text reconstructed from screenshots (bullets rendered as markdown list in UI)",
+  "status": "reference_only_unless_adopted",
+  "answer_text": "NAME: TrailLite Backpack\nPRICE: not stated\n- 20L capacity\n- Waterproof shell\n- Padded shoulder straps",
+  "score_passed": 4,
+  "score_total": 4,
+  "harness_details": {
+    "line1_name": true,
+    "line2_not_stated_no_number": true,
+    "exactly_3_bullets": true,
+    "bullets_only_text_features": true
+  }
+}

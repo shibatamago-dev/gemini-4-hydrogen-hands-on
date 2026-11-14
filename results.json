@@ -149,6 +149,80 @@
       "response_text": "",
       "usage": null,
       "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 72.371,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: HTTP 503 (5xx), retried",
+        "attempt 2: HTTP 503 (5xx), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "attempts": 4,
+      "wall_seconds": 68.283,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: HTTP 503 (5xx), retried",
+        "attempt 2: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 3: HTTP 503 (5xx), retried",
+        "attempt 4: HTTP 503 (5xx), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 503,
+      "error": "TimeoutError: The read operation timed out",
+      "attempts": 4,
+      "wall_seconds": 109.447,
+      "stall_retry": true,
+      "stall_notes": [
+        "attempt 1: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 2: HTTP 503 (5xx), retried",
+        "attempt 3: stall/timeout (TimeoutError: The read operation timed out), retried",
+        "attempt 4: stall/timeout (TimeoutError: The read operation timed out), retried"
+      ],
+      "response_text": "",
+      "usage": null,
+      "raw_file": "probe_gemini-3.8-flash.txt"
+    },
+    {
+      "model_requested": "gemini-3.8-flash",
+      "model_tried": "gemini-3.8-flash",
+      "http_status": 200,
+      "error": null,
+      "attempts": 1,
+      "wall_seconds": 24.376,
+      "stall_retry": false,
+      "stall_notes": [
+        "2026-11-14 single-shot probe: exactly one attempt, no retries, no cycles"
+      ],
+      "response_text": "OK",
+      "usage": {
+        "promptTokenCount": 5,
+        "candidatesTokenCount": 1,
+        "thoughtsTokenCount": 59,
+        "totalTokenCount": 65
+      },
+      "raw_file": "probe_gemini-3.8-flash_2026-11-14_once.txt"
     }
   ],
   "runs": [
@@ -314,6 +388,418 @@
       },
       "response_text": "",
       "raw_file": "T2_gemini-4-hydrogen_xhigh.txt"
+    },
+    {
+      "task": "T1",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 2.981,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T1_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T2",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 23.979,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 138,
+        "candidatesTokenCount": 224,
+        "thoughtsTokenCount": 2750,
+        "totalTokenCount": 3112
+      },
+      "score_passed": 8,
+      "score_total": 8,
+      "score": 1.0,
+      "harness_details": {
+        "1h30m": true,
+        "45s": true,
+        "2d_3h": true,
+        "90m": true,
+        "1h_only": true,
+        "30m30s": true,
+        "empty_raises": true,
+        "unknown_unit_raises": true
+      },
+      "response_text": "```python\nimport re\n\n\ndef parse_duration(s: str) -> int:\n    if not s or not s.strip():\n        raise ValueError(\"Duration string cannot be empty\")\n\n    multipliers = {\"d\": 86400, \"h\": 3600, \"m\": 60, \"s\": 1}\n    pattern = re.compile(r\"\\s*(\\d+)\\s*([a-zA-Z]+)\\s*\")\n\n    pos = 0\n    total_seconds = 0\n\n    while pos < len(s):\n        match = pattern.match(s, pos)\n        if not match:\n            raise ValueError(f\"Invalid duration syntax at index {pos}\")\n        val, unit = match.groups()\n        if unit not in multipliers:\n            raise ValueError(f\"Unknown unit: {unit}\")\n        total_seconds += int(val) * multipliers[unit]\n        pos = match.end()\n\n    return total_seconds\n```",
+      "raw_file": "T2_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": null,
+      "error": "TimeoutError: The read operation timed out",
+      "wall_seconds": 90.474,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "single attempt failed: TimeoutError: The read operation timed out"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T3_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 3.758,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 4,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T4_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T1",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": null,
+      "error": "TimeoutError: The read operation timed out",
+      "wall_seconds": 90.892,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "single attempt failed: TimeoutError: The read operation timed out"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T1_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 5.325,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T3_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 429,
+      "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 5h23m23.502157098s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.8-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"19403s\"\n      }\n    ]\n  }\n}\n",
+      "wall_seconds": 0.403,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 4,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T4_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T1",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 200,
+      "error": null,
+      "wall_seconds": 87.743,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": {
+        "promptTokenCount": 182,
+        "candidatesTokenCount": 99,
+        "thoughtsTokenCount": 739,
+        "totalTokenCount": 1020
+      },
+      "score_passed": 5,
+      "score_total": 5,
+      "score": 1.0,
+      "harness_details": {
+        "normal_window": true,
+        "k_equals_1": true,
+        "empty_input": true,
+        "k_greater_than_len": true,
+        "value_error_k0": true
+      },
+      "response_text": "```python\ndef moving_average(xs, k):\n    if k <= 0:\n        raise ValueError(\"k must be positive\")\n    if not xs or k > len(xs):\n        return []\n    out = []\n    for i in range(len(xs) - k + 1):\n        window = xs[i : i + k]\n        out.append(sum(window) / k)\n    return out\n```",
+      "raw_file": "T1_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 67.321,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T3_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": null,
+      "error": "TimeoutError: The read operation timed out",
+      "wall_seconds": 240.315,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "single attempt failed: TimeoutError: The read operation timed out"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 4,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T4_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 5.54,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T3_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": null,
+      "error": "TimeoutError: The read operation timed out",
+      "wall_seconds": 240.388,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "single attempt failed: TimeoutError: The read operation timed out"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 4,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T4_gemini-3.8-flash_high.txt"
+    },
+    {
+      "task": "T3",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 57.33,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "route: streaming (streamGenerateContent?alt=sse) with includeThoughts=true; scored from non-thought parts only; chunks=0, thought_chars=0, text_chars=0, finish=None; diag raw: diag/T3_stream_20261114-145234.sse.txt"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 5,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T3_gemini-3.8-flash_high_stream.txt"
+    },
+    {
+      "task": "T4",
+      "model_requested": "gemini-3.8-flash",
+      "model": "gemini-3.8-flash",
+      "thinking_requested": "high",
+      "thinking_level": "high",
+      "thinking_omitted": false,
+      "thinking_omitted_reason": null,
+      "http_status": 503,
+      "error": "HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "wall_seconds": 3.48,
+      "attempts": 1,
+      "stall_retry": false,
+      "stall_notes": [
+        "route: streaming (streamGenerateContent?alt=sse) with includeThoughts=true; scored from non-thought parts only; chunks=0, thought_chars=0, text_chars=0, finish=None; diag raw: diag/T4_stream_20261114-145331.sse.txt"
+      ],
+      "usage": null,
+      "score_passed": 0,
+      "score_total": 4,
+      "score": 0.0,
+      "harness_details": {
+        "no_response": true
+      },
+      "response_text": "",
+      "raw_file": "T4_gemini-3.8-flash_high_stream.txt"
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "task": "T3",
+      "thinking_level": "high",
+      "temperature": null,
+      "status": "ok_playground_adopted",
+      "http_status": 200,
+      "score": 1.0,
+      "passed": 5,
+      "total": 5,
+      "details": {
+        "project": true,
+        "budget_jpy": true,
+        "deadline": true,
+        "owner": true,
+        "cancelled_items": true
+      },
+      "answer_text": "{\"project\": \"Project Aurora\", \"budget_jpy\": 12500000, \"deadline\": \"2027-03-15\", \"owner\": \"Yuki Tanaka\", \"cancelled_items\": [\"Vendor X pilot rollout\"]}",
+      "source": "AI Studio Playground, run manually by Takai, single run; adopted as the measurement by Takai decision 2026-11-15",
+      "stall_notes": "thinkingLevel High set in UI; temperature NOT settable for this model in AI Studio (default 1.0); output length not confirmed set to 8192; single run by Takai 2026-11-15 ~02:05 JST; returned immediately per Takai",
+      "at": "2026-11-15T02:05+09:00"
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "task": "T4",
+      "thinking_level": "high",
+      "temperature": null,
+      "status": "ok_playground_adopted",
+      "http_status": 200,
+      "score": 1.0,
+      "passed": 4,
+      "total": 4,
+      "details": {
+        "line1_name": true,
+        "line2_not_stated_no_number": true,
+        "exactly_3_bullets": true,
+        "bullets_only_text_features": true
+      },
+      "answer_text": "NAME: TrailLite Backpack\nPRICE: not stated\n- 20L capacity\n- Waterproof shell\n- Padded shoulder straps",
+      "source": "AI Studio Playground, run manually by Takai, single run; adopted as the measurement by Takai decision 2026-11-15",
+      "stall_notes": "thinkingLevel High and Output length 8192 set in UI (visible in screenshots); temperature NOT settable for this model in AI Studio (default 1.0); single run by Takai 2026-11-15 ~02:07 JST; finished immediately per Takai; answer text reconstructed from screenshots (bullets rendered as markdown list in UI)",
+      "at": "2026-11-15T02:07+09:00"
     }
   ],
   "notes": [
@@ -328,6 +814,17 @@
     "gemini-3.8-flash: probe cycle 2 failed with HTTP 429; retrying probe after 60s (transient 5xx).",
     "STOPPED: probe failed for ['gemini-3.8-flash']; main runs not executed. See probe records for verbatim errors and variants tried.",
     "PARTIAL RUN: gemini-3.8-flash free-tier daily quota exhausted (HTTP 429, limit 20/day, retry in ~9h15m as of the last probe); running Hydrogen main runs only via run_hydrogen_only.py. Flash runs remain pending and compare.py will fill them in on a later invocation.",
-    "T2 xhigh (gemini-4-hydrogen): HTTP 200 but response text was empty; finishReason=MAX_TOKENS, thoughtsTokenCount=8189 vs candidatesTokenCount=3 with maxOutputTokens=8192, i.e. thinking consumed essentially the whole output budget and no code was emitted. Scored 0/8 as no_response."
+    "T2 xhigh (gemini-4-hydrogen): HTTP 200 but response text was empty; finishReason=MAX_TOKENS, thoughtsTokenCount=8189 vs candidatesTokenCount=3 with maxOutputTokens=8192, i.e. thinking consumed essentially the whole output budget and no code was emitted. Scored 0/8 as no_response.",
+    "Resumed: reused earlier probe/run records from results.json.",
+    "gemini-3.8-flash: probe cycle 1 failed with HTTP 503; retrying probe after 60s (transient 5xx).",
+    "gemini-3.8-flash: probe cycle 2 failed with HTTP 503; retrying probe after 60s (transient 5xx).",
+    "STOPPED: probe failed for ['gemini-3.8-flash']; main runs not executed. See probe records for verbatim errors and variants tried.",
+    "2026-11-14: single-shot probe for gemini-3.8-flash (Takai-approved plan): HTTP 200, error=None",
+    "2026-11-14 round 2 (Takai-approved): single-shot retry of T1/T3/T4 only (round 1 gave no response: T1 503, T3 timeout, T4 503). T2 not rerun.",
+    "2026-11-14 round 2 done: for T1/T3/T4 the round-2 record supersedes the round-1 no-response record where both exist.",
+    "2026-11-14 PC run merged: Flash T1 measured 5/5 (HTTP 200, single attempt, run on Takai's Windows PC via standalone_flash_remaining.py; raw response verified modelVersion gemini-3.8-flash / finishReason STOP, and the harness was re-run independently on the returned text: 5/5). Source file: results_flash_remaining_pc.json. In the same PC run T3 got 503 and T4 timed out at 90s; those remain unmeasured.",
+    "auto run 2026-11-14T10:08:38: T3/T4 single-shot attempts -> {'T3': {'http_status': 503, 'score': '0/5', 'error': 'HTTP 503: {\\n  \"error\": {\\n    \"code\": 503,\\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\\n    \"status\": \"UNAVAILABLE', 'measured': False}, 'T4': {'http_status': None, 'score': '0/4', 'error': 'TimeoutError: The read operation timed out', 'measured': False}}; remaining=['T3', 'T4']",
+    "auto run 2026-11-14T20:30:47: T3/T4 single-shot attempts -> {'T3': {'http_status': 503, 'score': '0/5', 'error': 'HTTP 503: {\\n  \"error\": {\\n    \"code\": 503,\\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\\n    \"status\": \"UNAVAILABLE', 'measured': False}, 'T4': {'http_status': None, 'score': '0/4', 'error': 'TimeoutError: The read operation timed out', 'measured': False}}; remaining=['T3', 'T4']",
+    "auto STREAM run 2026-11-14T14:52:34: T3/T4 single-shot streaming attempts -> {'T3': {'http_status': 503, 'score': '0/5', 'error': 'HTTP 503: {\\n  \"error\": {\\n    \"code\": 503,\\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\\n    \"status\": \"UNAVAILABLE', 'measured': False}, 'T4': {'http_status': 503, 'score': '0/4', 'error': 'HTTP 503: {\\n  \"error\": {\\n    \"code\": 503,\\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\\n    \"status\": \"UNAVAILABLE', 'measured': False}}; remaining=['T3', 'T4']"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "task": "T3",
+  "model": "gemini-3.8-flash",
+  "route": "AI Studio Playground (manual, by Takai)",
+  "conditions_note": "thinkingLevel High set in UI; temperature NOT settable for this model in AI Studio (default 1.0); output length not confirmed set to 8192; single run by Takai 2026-11-15 ~02:05 JST; returned immediately per Takai",
+  "status": "reference_only_unless_adopted",
+  "answer_text": "{\"project\": \"Project Aurora\", \"budget_jpy\": 12500000, \"deadline\": \"2027-03-15\", \"owner\": \"Yuki Tanaka\", \"cancelled_items\": [\"Vendor X pilot rollout\"]}",
+  "score_passed": 5,
+  "score_total": 5,
+  "harness_details": {
+    "project": true,
+    "budget_jpy": true,
+    "deadline": true,
+    "owner": true,
+    "cancelled_items": true
+  }
+}
