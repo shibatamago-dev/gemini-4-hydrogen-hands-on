@@ -800,6 +800,40 @@
       "source": "AI Studio Playground, run manually by Takai, single run; adopted as the measurement by Takai decision 2026-11-15",
       "stall_notes": "thinkingLevel High and Output length 8192 set in UI (visible in screenshots); temperature NOT settable for this model in AI Studio (default 1.0); single run by Takai 2026-11-15 ~02:07 JST; finished immediately per Takai; answer text reconstructed from screenshots (bullets rendered as markdown list in UI)",
       "at": "2026-11-15T02:07+09:00"
+    },
+    {
+      "model": "gemini-3.8-flash",
+      "task": "T3",
+      "thinking_level": "high",
+      "temperature": 0,
+      "status": "ok_api_streaming_post_completion",
+      "http_status": 200,
+      "score": 1.0,
+      "passed": 5,
+      "total": 5,
+      "details": {
+        "project": true,
+        "budget_jpy": true,
+        "deadline": true,
+        "owner": true,
+        "cancelled_items": true
+      },
+      "usage": {
+        "promptTokenCount": 152,
+        "candidatesTokenCount": 57,
+        "totalTokenCount": 819,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 152
+          }
+        ],
+        "thoughtsTokenCount": 610,
+        "serviceTier": "standard"
+      },
+      "source": "API streaming route from Muse, single attempt 2026-11-15 15:41 JST, AFTER article completion (extra confirmation run requested by Takai); headers at 110.15s then completed; matches the adopted Playground score 5/5",
+      "stall_notes": "headers held 110.15s before admission; total wall 113.5s (environment/process record, not model speed)",
+      "at": "2026-11-15T15:41:28+09:00"
     }
   ],
   "notes": [
